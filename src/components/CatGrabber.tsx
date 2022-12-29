@@ -37,6 +37,7 @@ const CatGrabber = () => {
             <div className="flex flex-row justify-center items-center">
                 <button
                     type='button'
+                    name='previous-cat'
                     className='h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 mr-2 rounded-full bg-indigo-500 hover:bg-indigo-600 text-white disabled:bg-gray-400 disabled:cursor-not-allowed'
                     onClick={previousCat}
                     disabled={prevDisabled || catState.isLoading}>
@@ -48,10 +49,11 @@ const CatGrabber = () => {
                     {catState.cat && <img
                         src={catState.cat}
                         alt='cat'
-                        className={`w-full h-full object-fill rounded-md animate-in fade-in duration-300 delay-150 ${catState.isLoading ? 'opacity-20' : 'opacity-100'}`} />}
+                        className={`w-full h-full object-cover rounded-md animate-in fade-in duration-300 delay-150 ${catState.isLoading ? 'opacity-20' : 'opacity-100'}`} />}
                 </div>
                 <button
                     type='button'
+                    name='next-cat'
                     className='h-12 w-12 sm:h-14 sm:w-14 lg:h-16 lg:w-16 ml-2 rounded-full bg-indigo-500 hover:bg-indigo-600 disabled:bg-gray-400 disabled:cursor-not-allowed text-white'
                     onClick={fetchCat}
                     disabled={catState.isLoading}>
