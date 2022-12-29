@@ -1,0 +1,11 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CatGrabber from "../components/CatGrabber";
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="flex flex-col justify-center items-center">
+    <h1 class="text-3xl my-4">Welcome to Grab a cat</h1>
+    <CatGrabber client:load />
+  </main>
+</Layout>
