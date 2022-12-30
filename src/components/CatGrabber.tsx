@@ -33,7 +33,7 @@ const CatGrabber = () => {
     }, [])
 
     return (
-        <div className="flex flex-col gap-y-4">
+        <div className="flex flex-col gap-y-4 w-full h-[75vh] sm:h-full justify-center">
             <div className="flex flex-row justify-center items-center">
                 <button
                     type='button'
@@ -45,7 +45,7 @@ const CatGrabber = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
                     </svg>
                 </button>
-                <div className="lg:w-96 lg:h-96 md:w-80 md:h-80 w-52 h-48 border border-gray-300 rounded-md drop-shadow-sm">
+                <div className="lg:w-96 lg:h-96 md:w-80 md:h-80 w-56 h-48 border border-gray-300 rounded-md drop-shadow-sm flex-grow sm:flex-grow-0">
                     {catState.cat && <img
                         src={catState.cat}
                         alt='cat'
